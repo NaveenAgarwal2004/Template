@@ -1,0 +1,308 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.navbar .logo a {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1e90ff; /* Trendy blue color */
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.navbar ul li a:hover {
+    color: #1e90ff;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('./Images/hero\ image.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-shop {
+    padding: 12px 30px;
+    background-color: #1e90ff;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-shop:hover {
+    background-color: #0d7bcd;
+}
+
+/* Innovations Section */
+.innovations {
+    padding: 50px 10%;
+    background-color: #f4f8ff;
+    text-align: center;
+}
+
+.innovations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #1e90ff;
+}
+
+.innovation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.innovation-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.innovation-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.innovation-card h3 {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+.innovation-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.innovation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Share Your Ideas */
+.ideas {
+    padding: 50px 10%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.ideas h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.ideas p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.ideas form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.ideas input, .ideas textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.ideas button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ideas button:hover {
+    background-color: #0d7bcd;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 10%;
+    text-align: center;
+}
+
+.footer .social-media {
+    margin-bottom: 20px;
+}
+
+.footer .social-icon {
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    margin: 0 10px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.footer .social-icon:hover {
+    /* background-color: #0d7bcd; */
+    cursor: pointer;
+  background: linear-gradient(#fff, #3877ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+/* Media Query for max-width 580px */
+@media (max-width: 580px) {
+    /* Navbar */
+    .navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 1.1rem;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn-shop {
+        padding: 10px 25px;
+    }
+
+    /* Innovations Section */
+    .innovations h2 {
+        font-size: 2rem;
+    }
+
+    .innovation-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .innovation-card img {
+        height: 180px;
+    }
+
+    .innovation-card h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Share Your Ideas */
+    .ideas h2 {
+        font-size: 2rem;
+    }
+
+    .ideas p {
+        font-size: 1rem;
+    }
+
+    .ideas form {
+        width: 100%;
+    }
+
+    .ideas input, .ideas textarea {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px;
+    }
+
+    .footer .social-media {
+        margin-bottom: 10px;
+    }
+
+    .footer .social-icon {
+        padding: 8px;
+        margin: 5px;
+    }
+}
